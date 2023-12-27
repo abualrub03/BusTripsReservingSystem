@@ -1,316 +1,120 @@
 ﻿
 @{
     ViewData["Title"] = "EventDetails";
+    Layout = "~/Views/Shared/UserLayouts/_UserLayout.cshtml";
+
 }
-<!doctype html>
-<html class="no-js" lang="zxx">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Travel agency</title>
-    <meta name="description" content>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/icon/favicon.png">
+<main>
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script nonce="0ebcc69c-b066-44ed-afcf-60f1568545d5">(function (w, d) { !function (dp, dq, dr, ds) { dp[dr] = dp[dr] || {}; dp[dr].executed = []; dp.zaraz = { deferred: [], listeners: [] }; dp.zaraz.q = []; dp.zaraz._f = function (dt) { return async function () { var du = Array.prototype.slice.call(arguments); dp.zaraz.q.push({ m: dt, a: du }) } }; for (const dv of ["track", "set", "debug"]) dp.zaraz[dv] = dp.zaraz._f(dv); dp.zaraz.init = () => { var dw = dq.getElementsByTagName(ds)[0], dx = dq.createElement(ds), dy = dq.getElementsByTagName("title")[0]; dy && (dp[dr].t = dq.getElementsByTagName("title")[0].text); dp[dr].x = Math.random(); dp[dr].w = dp.screen.width; dp[dr].h = dp.screen.height; dp[dr].j = dp.innerHeight; dp[dr].e = dp.innerWidth; dp[dr].l = dp.location.href; dp[dr].r = dq.referrer; dp[dr].k = dp.screen.colorDepth; dp[dr].n = dq.characterSet; dp[dr].o = (new Date).getTimezoneOffset(); if (dp.dataLayer) for (const dC of Object.entries(Object.entries(dataLayer).reduce(((dD, dE) => ({ ...dD[1], ...dE[1] })), {}))) zaraz.set(dC[0], dC[1], { scope: "page" }); dp[dr].q = []; for (; dp.zaraz.q.length;) { const dF = dp.zaraz.q.shift(); dp[dr].q.push(dF) } dx.defer = !0; for (const dG of [localStorage, sessionStorage]) Object.keys(dG || {}).filter((dI => dI.startsWith("_zaraz_"))).forEach((dH => { try { dp[dr]["z_" + dH.slice(7)] = JSON.parse(dG.getItem(dH)) } catch { dp[dr]["z_" + dH.slice(7)] = dG.getItem(dH) } })); dx.referrerPolicy = "origin"; dx.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(dp[dr]))); dw.parentNode.insertBefore(dx, dw) };["complete", "interactive"].includes(dq.readyState) ? zaraz.init() : dp.addEventListener("DOMContentLoaded", zaraz.init) }(w, d, "zarazData", "script"); })(window, document);</script>
-</head>
-<body>
-    <header>
-        <div class="header-area">
-            <div class="main-header header-sticky">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-
-                        <div class="col-xl-2 col-lg-2">
-                            <div class="logo">
-                                <a href="index.html"><img src="assets/img/logo/logo.png" alt></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-10 col-lg-10">
-                            <div class="menu-wrapper d-flex align-items-center justify-content-end">
-
-                                <div class="main-menu d-none d-lg-block">
-                                    <nav>
-                                        <ul id="navigation">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="event.html">Events</a></li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li>
-                                                <a href="#">Blog</a>
-                                                <ul class="submenu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="events_details.html">Events Details</a></li>
-                                                    <li><a href="blog_details.html">Blog Details</a></li>
-                                                    <li><a href="elements.html">Element</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">Contact</a></li>
-
-                                            <li class="button-header">
-                                                <a href="#" class="header-btn"> <i class="fas fa-phone-alt"></i> +10 (67) 678 2567</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main>
-
-        <div class="slider-area">
-            <div class="single-slider slider-height3 slider-bg2 slider-bg3 d-flex align-items-center ">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7">
-                            <div class="hero__caption hero__caption2  hero__caption3 text-center">
-                                <h2>Finlande</h2>
-                                <div class="cat-cap">
-                                    <p><a href="#">12 Jan - 18 Jan</a>5 Days</p>
-                                    <span class="price">$1200</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="shedule-area section-padding">
+    <div class="slider-area">
+        <div class="single-slider slider-height3 slider-bg2 slider-bg3 d-flex align-items-center ">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-10 com-sm-11">
-                        <div class="shedule-time mb-45 ">
-                            <h2>Day:01</h2>
-                            <p>
-                                Let’s start your journey with us, your dream will come true. Lorem ipsum dolor sit amet,
-                                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam quis nostrud exercitation.
-                            </p>
-                        </div>
-                        <div class="shedule-time mb-45 ">
-                            <h2>Day:02</h2>
-                            <p>
-                                Let’s start your journey with us, your dream will come true. Lorem ipsum dolor sit amet,
-                                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam quis nostrud exercitation.
-                            </p>
-                        </div>
-                        <div class="shedule-time mb-45 ">
-                            <h2>Day:03</h2>
-                            <p>
-                                Let’s start your journey with us, your dream will come true. Lorem ipsum dolor sit amet,
-                                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam quis nostrud exercitation.
-                            </p>
-                        </div>
-                        <div class="shedule-time mb-45 ">
-                            <h2>Day:04</h2>
-                            <p>
-                                Let’s start your journey with us, your dream will come true. Lorem ipsum dolor sit amet,
-                                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam quis nostrud exercitation.
-                            </p>
-                        </div>
-                        <div class="shedule-time mb-45 ">
-                            <h2>Day:05</h2>
-                            <p>
-                                Let’s start your journey with us, your dream will come true. Lorem ipsum dolor sit amet,
-                                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam quis nostrud exercitation.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="details-btn text-center mt-40">
-                            <a href="#" class="btn about-btn">Book Your Seat</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="instagram-area fix">
-            <div class="container-fluid p-0">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="instagram-active owl-carousel">
-                            <div class="single-instagram">
-                                <img src="assets/img/gallery/instra1.jpg" alt>
-                                <a href="#"><i class="ti-instagram"></i></a>
-                            </div>
-                            <div class="single-instagram">
-                                <img src="assets/img/gallery/instra2.jpg" alt>
-                                <a href="#"><i class="ti-instagram"></i></a>
-                            </div>
-                            <div class="single-instagram">
-                                <img src="assets/img/gallery/instra3.jpg" alt>
-                                <a href="#"><i class="ti-instagram"></i></a>
-                            </div>
-                            <div class="single-instagram">
-                                <img src="assets/img/gallery/instra4.jpg" alt>
-                                <a href="#"><i class="ti-instagram"></i></a>
-                            </div>
-                            <div class="single-instagram">
-                                <img src="assets/img/gallery/instra5.jpg" alt>
-                                <a href="#"><i class="ti-instagram"></i></a>
-                            </div>
-                            <div class="single-instagram">
-                                <img src="assets/img/gallery/instra4.jpg" alt>
-                                <a href="#"><i class="ti-instagram"></i></a>
+                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7">
+                        <div class="hero__caption hero__caption2  hero__caption3 text-center">
+                            <h2>Finlande</h2>
+                            <div class="cat-cap">
+                                <p><a href="#">12 Jan - 18 Jan</a>5 Days</p>
+                                <span class="price">$1200</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-    </main>
-    <footer>
-        <div class="footer-wrapper">
-            <div class="footer-area footer-padding">
-                <div class="container">
-                    <div class="row justify-content-between">
-                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
-                            <div class="single-footer-caption mb-50">
-                                <div class="single-footer-caption mb-30">
-
-                                    <div class="footer-logo mb-35">
-                                        <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt></a>
-                                    </div>
-                                    <div class="footer-tittle">
-                                        <div class="footer-pera">
-                                            <p>Land behold it created good saw after she'd Our set living. Signs midst dominion creepeth morning laboris nisi ufsit aliquip.</p>
-                                        </div>
-
-                                        <div class="footer-social">
-                                            <a href="#"><i class="fab fa-twitter-square"></i></a>
-                                            <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-square"></i></a>
-                                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                                            <a href="#"><i class="fab fa-pinterest-square"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Navigation</h4>
-                                    <ul>
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="#">Services</a></li>
-                                        <li><a href="#">Blog</a></li>
-                                        <li><a href="#">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-2 col-md-8 col-sm-6">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Services</h4>
-                                    <ul>
-                                        <li><a href="#">Blackforest</a></li>
-                                        <li><a href="#">Bodhubon</a></li>
-                                        <li><a href="#">Rongdhonu</a></li>
-                                        <li><a href="#">Meghrong</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-8">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle mb-20">
-                                    <h4>Contact Us</h4>
-                                    <p>76/A, Green Lane, Dhanmondi, NYC</p>
-                                    <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="056160686a68646c693d3c456268646c692b666a68">[email&#160;protected]</a></p>
-                                </div>
-                                <ul class="mb-20">
-                                    <li class="number"><a href="#">+10 (78) 738-9083</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom-area">
-                <div class="container">
-                    <div class="footer-border">
-                        <div class="row">
-                            <div class="col-xl-12 ">
-                                <div class="footer-copy-right text-center">
-                                    <p>Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" rel="nofollow noopener">Colorlib</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <div id="back-top">
-        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
     </div>
 
 
-    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="./assets/js/popper.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
+    <div class="shedule-area section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 com-sm-11">
+                    <div class="shedule-time mb-45 ">
+                        <h2>Day:01</h2>
+                        <p>
+                            Let’s start your journey with us, your dream will come true. Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+                        </p>
+                    </div>
+                    <div class="shedule-time mb-45 ">
+                        <h2>Day:02</h2>
+                        <p>
+                            Let’s start your journey with us, your dream will come true. Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+                        </p>
+                    </div>
+                    <div class="shedule-time mb-45 ">
+                        <h2>Day:03</h2>
+                        <p>
+                            Let’s start your journey with us, your dream will come true. Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+                        </p>
+                    </div>
+                    <div class="shedule-time mb-45 ">
+                        <h2>Day:04</h2>
+                        <p>
+                            Let’s start your journey with us, your dream will come true. Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+                        </p>
+                    </div>
+                    <div class="shedule-time mb-45 ">
+                        <h2>Day:05</h2>
+                        <p>
+                            Let’s start your journey with us, your dream will come true. Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-    <script src="./assets/js/owl.carousel.min.js"></script>
-    <script src="./assets/js/slick.min.js"></script>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="details-btn text-center mt-40">
+                        <a href="#" class="btn about-btn">Book Your Seat</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script src="./assets/js/wow.min.js"></script>
-    <script src="./assets/js/jquery.magnific-popup.js"></script>
-    <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <div class="instagram-area fix">
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="instagram-active owl-carousel">
+                        <div class="single-instagram">
+                            <img src="assets/img/gallery/instra1.jpg" alt>
+                            <a href="#"><i class="ti-instagram"></i></a>
+                        </div>
+                        <div class="single-instagram">
+                            <img src="assets/img/gallery/instra2.jpg" alt>
+                            <a href="#"><i class="ti-instagram"></i></a>
+                        </div>
+                        <div class="single-instagram">
+                            <img src="assets/img/gallery/instra3.jpg" alt>
+                            <a href="#"><i class="ti-instagram"></i></a>
+                        </div>
+                        <div class="single-instagram">
+                            <img src="assets/img/gallery/instra4.jpg" alt>
+                            <a href="#"><i class="ti-instagram"></i></a>
+                        </div>
+                        <div class="single-instagram">
+                            <img src="assets/img/gallery/instra5.jpg" alt>
+                            <a href="#"><i class="ti-instagram"></i></a>
+                        </div>
+                        <div class="single-instagram">
+                            <img src="assets/img/gallery/instra4.jpg" alt>
+                            <a href="#"><i class="ti-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script src="./assets/js/jquery.counterup.min.js"></script>
-    <script src="./assets/js/waypoints.min.js"></script>
-    <script src="./assets/js/jquery.nice-select.min.js"></script>
-
-    <script src="./assets/js/contact.js"></script>
-    <script src="./assets/js/jquery.form.js"></script>
-    <script src="./assets/js/jquery.validate.min.js"></script>
-    <script src="./assets/js/mail-script.js"></script>
-    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-
-    <script src="./assets/js/plugins.js"></script>
-    <script src="./assets/js/main.js"></script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-23581568-13');
-    </script>
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"83b78b677ad870ec","version":"2023.10.0","token":"cd0b4b3a733644fc843ef0b185f98241"}' crossorigin="anonymous"></script>
-</body>
-</html>
+</main>
