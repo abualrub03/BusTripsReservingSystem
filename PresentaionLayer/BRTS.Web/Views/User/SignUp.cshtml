@@ -9,18 +9,21 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-8 col-lg-8 col-md-9 col-sm-12">
                         <div class="hero__caption text-center">
-                            <h1 data-animation="fadeInUp" data-delay="0.1s"><dd> Important Captins !</dd>
-                                You will be pending until an admin aproved your request to join our system so if you request to be an captin please keep your eyes on emails
-                            
+                            <h1 data-animation="fadeInUp" data-delay="0.1s">
+                            <dd> Important Captins !</dd>
+                            You will be pending until an admin aproved your request to join our system so if you request to be an captin please keep your eyes on emails
                             </h1>
-
                             <p data-animation="fadeInUp" data-delay="0.6s">Let’s start your journey with us</p>
-
-
                             <div class="">
                                 <div class="">
-                                    <form class="form-contact contact_form" action="" method="post" id="contactForm" novalidate="">
+                                    <form class="form-contact" action="SignUpRequest" method="post"  >
                                         <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label for="imageFile">Select image to upload:</label>
+                                                    <input type="file" id="imageFile" name="imageFile" accept="image/*">
+                                                </div>
+                                            </div>
                                             <div class="col-12">
                                                 <div class="form-group">
                                                     <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="First Name">
@@ -40,7 +43,8 @@
                                                 <div class="form-group">
                                                     <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Gender">
                                                 </div>
-                                            </div><div class="col-12">
+                                            </div>
+                                            <div class="col-12">
                                                 <div class="form-group">
                                                     <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Age">
                                                 </div>
@@ -49,7 +53,7 @@
                                                 <div class="form-group">
                                                     <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Email">
                                                 </div>
-                                            </div> 
+                                            </div>
                                             <div class="col-12">
                                                 <div class="form-group">
                                                     <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="UserName">
@@ -65,16 +69,16 @@
                                                     <input class="form-control" name="subject" id="subject" type="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Password">
                                                 </div>
                                             </div>
+                                            
                                         </div>
-
+                                        <div>
+                                            <button style="margin:10px;" type="submit" class="btn slider-btn " data-animation="bounceIn" data-delay="1s">Sign Up</button>
+                                        </div>
+                                        
                                     </form>
                                 </div>
-
                             </div>
-                            <div>
-                                <a style="margin:10px;" href="#" class="btn slider-btn " data-animation="bounceIn" data-delay="1s">Sign Up</a>
-                            </div>
-
+                            
                         </div>
                     </div>
                 </div>

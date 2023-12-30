@@ -4,6 +4,7 @@ namespace BRTS.Web.Controllers
 {
     public class UserController : Controller
     {
+       
         [Route("")]
         [Route("/User/Index")]
         public IActionResult Index()
@@ -31,13 +32,19 @@ namespace BRTS.Web.Controllers
             return View();
         }public IActionResult SignIn()
         {
-            return View();
+            return View("SignIn");
         }public IActionResult SignUp()
         {
             return View();
-        }public IActionResult CheckingStatus()
+        }
+        public IActionResult CheckingStatus()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult SignUpRequest(Entities.Account Account)
+        {
+            return SignIn();
         }
     }
 }
