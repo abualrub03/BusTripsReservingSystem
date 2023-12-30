@@ -4,12 +4,13 @@ namespace BRTS.Web.Controllers
 {
     public class UserController : Controller
     {
-        [Route("")]  
+        [Route("")]
+        [Route("/User/Index")]
         public IActionResult Index()
         {
             return View();
         }
-        public IActionResult Events()
+        public IActionResult Trips()
         {
             return View();
         }
@@ -26,6 +27,15 @@ namespace BRTS.Web.Controllers
             return View();
         }
         public IActionResult Elements()
+        {
+            return View();
+        }public IActionResult SignIn()
+        {
+            return View();
+        }public IActionResult SignUp()
+        {
+            return View();
+        }public IActionResult CheckingStatus()
         {
             return View();
         }

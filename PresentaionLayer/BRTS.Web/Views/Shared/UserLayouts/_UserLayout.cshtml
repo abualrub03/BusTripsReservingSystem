@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/css/slick.css">
     <link rel="stylesheet" href="/css/nice-select.css">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/cdd7042138.js" crossorigin="anonymous"></script>
     <script nonce="e5c42607-2380-4395-89fa-1f805255bb0f">(function (w, d) { !function (dp, dq, dr, ds) { dp[dr] = dp[dr] || {}; dp[dr].executed = []; dp.zaraz = { deferred: [], listeners: [] }; dp.zaraz.q = []; dp.zaraz._f = function (dt) { return async function () { var du = Array.prototype.slice.call(arguments); dp.zaraz.q.push({ m: dt, a: du }) } }; for (const dv of ["track", "set", "debug"]) dp.zaraz[dv] = dp.zaraz._f(dv); dp.zaraz.init = () => { var dw = dq.getElementsByTagName(ds)[0], dx = dq.createElement(ds), dy = dq.getElementsByTagName("title")[0]; dy && (dp[dr].t = dq.getElementsByTagName("title")[0].text); dp[dr].x = Math.random(); dp[dr].w = dp.screen.width; dp[dr].h = dp.screen.height; dp[dr].j = dp.innerHeight; dp[dr].e = dp.innerWidth; dp[dr].l = dp.location.href; dp[dr].r = dq.referrer; dp[dr].k = dp.screen.colorDepth; dp[dr].n = dq.characterSet; dp[dr].o = (new Date).getTimezoneOffset(); if (dp.dataLayer) for (const dC of Object.entries(Object.entries(dataLayer).reduce(((dD, dE) => ({ ...dD[1], ...dE[1] })), {}))) zaraz.set(dC[0], dC[1], { scope: "page" }); dp[dr].q = []; for (; dp.zaraz.q.length;) { const dF = dp.zaraz.q.shift(); dp[dr].q.push(dF) } dx.defer = !0; for (const dG of [localStorage, sessionStorage]) Object.keys(dG || {}).filter((dI => dI.startsWith("_zaraz_"))).forEach((dH => { try { dp[dr]["z_" + dH.slice(7)] = JSON.parse(dG.getItem(dH)) } catch { dp[dr]["z_" + dH.slice(7)] = dG.getItem(dH) } })); dx.referrerPolicy = "origin"; dx.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(dp[dr]))); dw.parentNode.insertBefore(dx, dw) };["complete", "interactive"].includes(dq.readyState) ? zaraz.init() : dp.addEventListener("DOMContentLoaded", zaraz.init) }(w, d, "zarazData", "script"); })(window, document);</script>
 </head>
 <body>
@@ -32,7 +33,7 @@
                 <div class="row align-items-center">
                     <div class="col-xl-2 col-lg-2">
                         <div class="logo">
-                            <a href="index.html"><img src="/img/logo/logo.png" alt></a>
+                            <a href="/User/Index"><img src="/img/logo/logo.png" alt></a>
                         </div>
                     </div>
                     <div class="col-xl-10 col-lg-10">
@@ -40,26 +41,13 @@
                             <div class="main-menu d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="event.html">Events</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li>
-                                            <a href="#">Blog</a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="events_details.html">Events Details</a></li>
-                                                <li><a href="blog_details.html">Blog Details</a></li>
-                                                <li><a href="elements.html">Element</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li>
-                                                <a href="#" class="btn slider-btn " data-animation="bounceIn" data-delay="1s">Explore Destinations</a>
+                                        <li><a href="/User/Index">Home</a></li>
+                                            <li><a href="/User/Trips">Trips</a></li>
+                                            <li><a href="/User/About">About</a></li>
 
-                                        </li>
-                                        <li>
-                                                <a href="#" class="btn slider-btn " data-animation="bounceIn" data-delay="1s">Explore Destinations</a>
-                                        </li>
+                                            <li><a href="/User/Contact">Contact Us</a></li>
+                                            <li><a href="/User/SignIn">Account</a></li>
+                                        
                                     </ul>
                                 </nav>
                             </div>
@@ -76,7 +64,7 @@
 
     @RenderBody()
 
-    <footer>
+    <footer style="margin-top:25px;">
         <div class="footer-wrapper">
             <div class="footer-area footer-padding">
                 <div class="container">
