@@ -41,9 +41,11 @@ namespace BRTS.Web.Controllers
         {
             return View();
         }
+       
         [HttpPost]
-        public IActionResult SignUpRequest(Entities.Account Account)
+        public IActionResult SignUpRequest(IFormFile imageFile, Entities.Account Account)
         {
+
             return SignIn();
         }
     }
