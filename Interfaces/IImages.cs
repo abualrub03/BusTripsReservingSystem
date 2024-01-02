@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    public interface IAccount
+    public interface IImages
     {
-
     }
 }

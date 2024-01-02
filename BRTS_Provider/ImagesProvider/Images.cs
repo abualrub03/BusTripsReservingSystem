@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Interfaces
+namespace BRTS_Providers.ImagesProvider
 {
-    public interface IAccount
+    public class Images
     {
 
     }

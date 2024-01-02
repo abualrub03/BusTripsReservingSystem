@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Interfaces
+namespace ViewModels.AdminViewModels
 {
-    public interface IAccount
+    public class ImageIdSignUp
     {
-
+        public int ImageId { get; set; }
     }
 }

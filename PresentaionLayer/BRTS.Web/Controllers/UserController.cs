@@ -45,6 +45,8 @@ namespace BRTS.Web.Controllers
         [HttpPost]
         public IActionResult SignUpRequest(IFormFile imageFile, Entities.Account Account)
         {
+            BRTS_Providers.AccountProvider.Account _account = new BRTS_Providers.AccountProvider.Account();
+            _account.SignUpNewAccount(imageFile, Account);
 
             return SignIn();
         }
