@@ -17,29 +17,31 @@
 
 
                             <div class="">
-                                
                                 <div class="">
-                                    <form class="form-contact contact_form" action="" method="post" id="contactForm" novalidate="">
+                                    <form class="form-contact" action="SignInRequest" method="post" enctype="multipart/form-data">
                                         <div class="row">
+                                            
                                             <div class="col-12">
                                                 <div class="form-group">
-                                                    <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Email / UserName">
+                                                    <input class="form-control" name="emailAddress" id="emailAddress" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Email or UserName">
                                                 </div>
                                             </div>
                                             
                                             <div class="col-12">
                                                 <div class="form-group">
-                                                    <input class="form-control" name="subject" id="subject" type="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Password">
+                                                    <input class="form-control" name="password" id="password" type="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Password">
                                                 </div>
                                             </div>
+
                                         </div>
-                                        
+                                        <div>
+                                            <button style="margin:10px;" type="submit" class="btn slider-btn " data-animation="bounceIn" data-delay="1s">Sign In</button>
+                                        </div>
+
                                     </form>
                                 </div>
-                                
                             </div>
                             <div>
-                                <a style="margin:10px;" href="#" class="btn slider-btn " data-animation="bounceIn" data-delay="1s">Sign In</a>
                                 <a style="margin:10px;" href="/User/CheckingStatus" class="btn slider-btn " data-animation="bounceIn" data-delay="1s">Checking Status</a>
                                 <a style="margin:10px;" href="/User/SignUp" class="btn slider-btn " data-animation="bounceIn" data-delay="1s">Sign Up</a>
 

@@ -2,14 +2,11 @@
 
 namespace BRTS.Web.Controllers
 {
-    public class AdminController : Controller
+    public class CaptinController : Controller
     {
-
-        public IActionResult AdminDashBoard()
+        public IActionResult captinDashBoard()
         {
             return View();
         }
-
-
     }
 }

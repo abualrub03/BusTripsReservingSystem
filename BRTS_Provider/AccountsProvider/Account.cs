@@ -4,7 +4,7 @@ using System;
 using Microsoft.Data.SqlClient;
 using Interfaces;
 using Microsoft.AspNetCore.Http;
-using ViewModels.AdminViewModels;
+using ViewModels.UserViewModels;
 namespace BRTS_Providers.AccountProvider
 {
     public class Account : CoreLayer.Disposable, IAccount
@@ -64,6 +64,32 @@ namespace BRTS_Providers.AccountProvider
                     new SqlParameter { ParameterName = "@status", Value =  "Pending"},
                 };
                 return  DAL.ExecuteNonQuery("spInsertIntoTblAccounts");
+            }
+        }
+        public ViewModels.UserViewModels.SignInViewModel SignInRequest(Entities.Account Account)
+        {
+            
+            using (var DAL = new DataAccess.DataAccessLayer())
+            {
+                DAL.Parameters = new List<SqlParameter> {
+                            new SqlParameter{ ParameterName = "@emailAddress", Value =  Account.emailAddress},
+                            new SqlParameter{ ParameterName = "@password", Value =  Account.password},
+                };
+
+                return DAL.ExecuteReader<ViewModels.UserViewModels.SignInViewModel>("spSignInRequest").FirstOrDefault();
+
+
+            }
+        }
+        public ViewModels.UserViewModels.CheckingStatusRequestViewModel StatusChecking(Entities.Account Account)
+        {
+            using (var DAL = new DataAccess.DataAccessLayer())
+            {
+                DAL.Parameters = new List<SqlParameter> {
+                            new SqlParameter{ ParameterName = "@emailAddress", Value =  Account.emailAddress},
+                            new SqlParameter{ ParameterName = "@password", Value =  Account.password},
+                };
+                return DAL.ExecuteReader<ViewModels.UserViewModels.CheckingStatusRequestViewModel>("spChecckingStatus").FirstOrDefault();
             }
         }
 

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ViewModels.AdminViewModels
+namespace ViewModels.UserViewModels
 {
-    public class ImageIdSignUp
+    public class CheckingStatusRequestViewModel
     {
-        public int ImageId { get; set; }
+        public string status { get; set; }
     }
 }

@@ -39,7 +39,17 @@ namespace BRTS.Web.Controllers
         }
         public IActionResult CheckingStatus()
         {
+            
+
+
             return View();
+        }
+        [HttpPost]
+        public IActionResult CheckingStatusRequest(Entities.Account account)
+        {
+            BRTS_Providers.AccountProvider.Account _account = new BRTS_Providers.AccountProvider.Account();
+            var statusViewModel = _account.StatusChecking(account);
+            return View("CheckingStatus");
         }
        
         [HttpPost]
@@ -49,6 +59,24 @@ namespace BRTS.Web.Controllers
             _account.SignUpNewAccount(imageFile, Account);
 
             return SignIn();
+        }
+        [HttpPost]
+        public IActionResult SignInRequest( Entities.Account Account)
+        {
+            BRTS_Providers.AccountProvider.Account _account = new BRTS_Providers.AccountProvider.Account();
+            var account = _account.SignInRequest(Account);
+            if(account.role == "Admin")
+            {
+                return RedirectToAction( "AdminDashBoard", "Admin");
+            }
+            else if (account.role == "Captin")
+            {
+                return RedirectToAction( "CaptinDashBoard", "Captin");
+            }
+            else
+            {
+                return RedirectToAction( "CustomerDashBoard", "Customer");
+            }
         }
     }
 }
