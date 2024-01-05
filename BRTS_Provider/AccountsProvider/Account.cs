@@ -92,6 +92,10 @@ namespace BRTS_Providers.AccountProvider
                 return DAL.ExecuteReader<ViewModels.UserViewModels.CheckingStatusRequestViewModel>("spChecckingStatus").FirstOrDefault();
             }
         }
-
+        public List<Entities.Account> getAllAccounts()
+        {
+            using var DAL = new DataAccess.DataAccessLayer();
+            return DAL.ExecuteReader<Entities.Account>("spSelectAllTblAccounts");
+        }
     }
 }

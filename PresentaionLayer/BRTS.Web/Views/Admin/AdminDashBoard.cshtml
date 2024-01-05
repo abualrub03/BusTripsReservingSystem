@@ -1,5 +1,107 @@
-﻿@{
+﻿@model ViewModels.AdminViewModels.DashBoardViewModel
+@{
     ViewData["Title"] = "AdminDashBoard";
     Layout = "~/Views/Shared/AdminLayouts/_AdminLayout.cshtml";
 }
 <h1>Admin DashBoard</h1>
+<table>
+    <caption>Accounts List</caption>
+    <thead>
+        <tr>
+            <th>accountId</th>
+            <th>firstName</th>
+            <th>lastName</th>
+            <th>Age</th>
+            <th>role</th>
+            <th>emailAddress</th>
+            <th>phoneNumber</th>
+            <th>gender</th>
+            <th>userName</th>
+            <th>password</th>
+            <th>status</th>
+            <th>imageId</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var acc in Model.accounts)
+        {
+            <tr>
+                <td>@acc.accountId</td>
+                <td>@acc.firstName</td>
+                <td>@acc.lastName</td>
+                <td>@acc.Age</td>
+                <td>@acc.role</td>
+                <td>@acc.emailAddress</td>
+                <td>@acc.phoneNumber</td>
+                <td>@acc.gender</td>
+                <td>@acc.userName</td>
+                <td>@acc.password</td>
+                <td>@acc.status</td>
+                <td>@acc.imageId</td>
+            </tr>
+        }
+    </tbody>
+    
+
+    
+</table>
+<br />
+<table>
+    <caption>Trips List</caption>
+    <thead>
+        <tr>
+            <th>TripId</th>
+            <th>TripGoingFrom</th>
+            <th>TripDestination</th>
+            <th>StartDateAndTime</th>
+            <th>EndDateAndTime</th>
+            <th>TripName</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var trip in Model.trips)
+        {
+            <tr>
+                <td>@trip.TripId</td>
+                <td>@trip.TripGoingFrom</td>
+                <td>@trip.TripDestination</td>
+                <td>@trip.StartDateAndTime</td>
+                <td>@trip.EndDateAndTime</td>
+                <td>@trip.TripName</td>
+            </tr>
+        }
+    </tbody>
+
+
+
+</table>
+<br />
+<table>
+    <caption>Buss List</caption>
+    <thead>
+        <tr>
+            <th>BusId</th>
+            <th>TripId</th> 
+            <th>Captin_Id</th>
+            <th>TotalSeats</th>
+            <th>AvailabelSeats</th>
+    
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var trip in Model.buses)
+        {
+            <tr>
+                <td>@trip.BusId</td>
+                <td>@trip.TripId</td>
+                <td>@trip.Captin_Id</td>
+                <td>@trip.TotalSeats</td>
+                <td>@trip.AvailabelSeats</td>
+            </tr>
+        }
+    </tbody>
+
+
+
+</table>
