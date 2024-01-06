@@ -6,7 +6,7 @@ namespace BRTS.Web.Controllers
     {
         public IActionResult CustomerDashBoard()
         {
-            return View();
+            return View(new BRTS_Providers.TripsProvider.Trips().getAllTrips());
         }
     }
 }

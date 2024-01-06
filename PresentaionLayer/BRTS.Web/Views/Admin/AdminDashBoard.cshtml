@@ -3,9 +3,49 @@
     ViewData["Title"] = "AdminDashBoard";
     Layout = "~/Views/Shared/AdminLayouts/_AdminLayout.cshtml";
 }
-<h1>Admin DashBoard</h1>
+<style>
+    /* Container */
+    border-radius: 5px;
+    }
+
+    /* Headings */
+    h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f0f0f0;
+        font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f8f8f8;
+    }
+
+    /* Interactive Elements */
+    tr:hover {
+        background-color: #e5f5ff;
+    }
+
+</style>
+<h1 style="font-size: xx-large; text-align: center; margin:30px ">Admin DashBoard</h1>
 <table>
-    <caption>Accounts List</caption>
+    <caption  style="font-size:xx-large" >Accounts List</caption>
     <thead>
         <tr>
             <th>accountId</th>
@@ -47,7 +87,7 @@
 </table>
 <br />
 <table>
-    <caption>Trips List</caption>
+    <caption style="font-size:xx-large" >Trips List</caption>
     <thead>
         <tr>
             <th>TripId</th>
@@ -78,7 +118,7 @@
 </table>
 <br />
 <table>
-    <caption>Buss List</caption>
+    <caption style="font-size:xx-large" >Buss List</caption>
     <thead>
         <tr>
             <th>BusId</th>

@@ -11,7 +11,7 @@ namespace BRTS.Web.Controllers
         }    
         public IActionResult CreateTrip()
         {
-            return View();
+            return View(new BRTS_Providers.BusesProvider.Buses().getAllBuses());
         }
         public IActionResult CreateNewTripRequest()
         {
@@ -25,7 +25,15 @@ namespace BRTS.Web.Controllers
         public IActionResult AddNewBusRequest(Entities.Buses bus)
         {
             return View( "AddNewBus",new BRTS_Providers.BusesProvider.Buses().AddNewBuss(bus));
+        } 
+        [HttpPost]
+        public IActionResult AddNewTripRequest(Entities.Trips trip , int BusId)
+        {
+            new BRTS_Providers.TripsProvider.Trips().AddNewTrip(trip, BusId);
+            return View( "CreateTrip",new BRTS_Providers.BusesProvider.Buses().getAllBuses());    
+                
         }
+       
 
 
     }
