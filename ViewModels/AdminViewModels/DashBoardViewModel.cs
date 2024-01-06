@@ -15,11 +15,12 @@ namespace ViewModels.AdminViewModels
             buses = _buses;
             trips = _trips;
         }
-        public DashBoardViewModel(List<Entities.Trips> _trips)
+        public DashBoardViewModel(List<Entities.Trips> _trips , int _id)
         {
-           
+           id = _id;
             trips = _trips;
         }
+        public int id { get; set; }
         public List<Entities.Account> accounts { get; set; }
         public List<Entities.Buses> buses { get; set; }
         public List<Entities.Trips> trips { get; set; }

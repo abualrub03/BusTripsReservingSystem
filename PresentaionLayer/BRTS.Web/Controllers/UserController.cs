@@ -75,6 +75,8 @@ namespace BRTS.Web.Controllers
             }
             else
             {
+                TempData["Id"] = account.accountId;
+
                 return RedirectToAction( "CustomerDashBoard", "Customer");
             }
         }
