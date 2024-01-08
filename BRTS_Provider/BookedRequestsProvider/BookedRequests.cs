@@ -21,6 +21,18 @@ namespace BRTS_Providers.BookedRequestsProvider
                 };
                 return DAL.ExecuteNonQuery("spInsertIntoBookedRequests");
             }
+           
         }
+        public List<Entities.Trips> getAllBookedTrips(int Id)
+        {
+            using (var DAL = new DataAccess.DataAccessLayer())
+            {
+                DAL.Parameters = new List<SqlParameter> {
+                    new SqlParameter{ ParameterName = "@Id", Value =  Id},
+                };
+                return DAL.ExecuteReader<Entities.Trips>("spGetAllBookedTrips");
+            }
+        }
+
     }
 }

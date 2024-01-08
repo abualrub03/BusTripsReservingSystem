@@ -99,6 +99,39 @@
 
 </table>
 <br />
+    <table>
+        <caption style="font-size:xx-large">Booked Trips</caption>
+        <thead>
+            <tr>
+                <th>TripId</th>
+                <th>TripGoingFrom</th>
+                <th>TripDestination</th>
+                <th>StartDateAndTime</th>
+                <th>EndDateAndTime</th>
+                <th>TripName</th>
 
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var trip in Model.bookedTrips)
+            {
+                
+                <tr>
+                    <td>@trip.TripId</td>
+                    <td>@trip.TripGoingFrom</td>
+                    <td>@trip.TripDestination</td>
+                    <td>@trip.StartDateAndTime</td>
+                    <td>@trip.EndDateAndTime</td>
+                    <td>@trip.TripName</td>
+                    
+                </tr>
+
+
+            }
+        </tbody>
+
+
+
+    </table>
 
 </div>

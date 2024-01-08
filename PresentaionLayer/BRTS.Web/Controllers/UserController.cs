@@ -1,5 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Security.Claims;
 namespace BRTS.Web.Controllers
 {
     public class UserController : Controller
@@ -65,7 +69,9 @@ namespace BRTS.Web.Controllers
         {
             BRTS_Providers.AccountProvider.Account _account = new BRTS_Providers.AccountProvider.Account();
             var account = _account.SignInRequest(Account);
-            if(account.role == "Admin")
+
+            
+            if (account.role == "Admin")
             {
                 return RedirectToAction( "AdminDashBoard", "Admin");
             }
@@ -73,11 +79,15 @@ namespace BRTS.Web.Controllers
             {
                 return RedirectToAction( "CaptinDashBoard", "Captin");
             }
-            else
+            else if(account.role == "User")
             {
                 TempData["Id"] = account.accountId;
 
                 return RedirectToAction( "CustomerDashBoard", "Customer");
+            }
+            else
+            {
+                return RedirectToAction("Index", "User");
             }
         }
     }
