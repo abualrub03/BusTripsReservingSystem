@@ -21,7 +21,6 @@ namespace BRTS_Providers.BookedRequestsProvider
                 };
                 return DAL.ExecuteNonQuery("spInsertIntoBookedRequests");
             }
-           
         }
         public List<Entities.Trips> getAllBookedTrips(int Id)
         {
